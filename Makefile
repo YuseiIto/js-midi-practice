@@ -9,3 +9,10 @@ fmt:
 .PHONY: run
 run:
 	node dist/index.js
+
+.PHONY: build
+build:
+	npm run build
+
+.PHONY: dev
+dev: build run
