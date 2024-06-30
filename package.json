@@ -2,7 +2,7 @@
   "name": "js-midi-practice",
   "version": "1.0.0",
   "description": "Play with jsmidigen",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"

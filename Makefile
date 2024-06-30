@@ -5,3 +5,7 @@ devshell: # Just an wrapper of `nix develop` but with `$$SHELL` to keep using sa
 .PHONY: fmt
 fmt:
 	nix fmt
+
+.PHONY: run
+run:
+	node dist/index.js
