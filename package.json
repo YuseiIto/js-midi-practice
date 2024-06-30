@@ -1,0 +1,18 @@
+{
+  "name": "js-midi-practice",
+  "version": "1.0.0",
+  "description": "Play with jsmidigen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yusei Ito <me@yuseiito.com>",
+  "license": "ISC",
+  "dependencies": {
+    "midi-writer-js": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "typescript": "^5.5.2"
+  }
+}
