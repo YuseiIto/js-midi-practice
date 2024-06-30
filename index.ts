@@ -7,6 +7,11 @@ const track = new MidiWriter.Track();
 // Define an instrument (optional):
 track.addEvent(new MidiWriter.ProgramChangeEvent({ instrument: 1 }));
 
+/*
+ * X: 1/4 note rest before the note
+ * S: 1/8 note duration
+ * Otherwise, 1/4 note duration without rest
+*/
 const notes = ['C4', 'D4', 'E4', 'F4', 'E4', 'D4', 'C4',
 	'E4X', 'F4', 'G4', 'A4', 'G4', 'F4', 'E4',
 	'C4X', 'C4X', 'C4X', 'C4X',
@@ -15,16 +20,9 @@ const notes = ['C4', 'D4', 'E4', 'F4', 'E4', 'D4', 'C4',
 
 
 for (const p of notes) {
-	let wait = null;
-	if (p.includes('X')) {
-		wait = '4';
-	}
 
-	let duration = '4';
-	if (p.includes('S')) {
-		duration = '8';
-	}
-
+	const wait = p.includes('X') ? '4' : null;
+	const duration = p.includes('S') ? '8' : '4';
 	const pitch = [p.replace(/X|S/g, '')];
 
 	const event = new MidiWriter.NoteEvent({ pitch, duration, wait });
